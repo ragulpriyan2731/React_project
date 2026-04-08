@@ -1,5 +1,6 @@
 import React from "react";
-import FeedbackMessage from "./FeedbackMessage";
+import MessageChat from "./Messagechat";
+import FeedbackMessage from "./FeedbackMessages";
 
 function Feedback(){
     return(
@@ -7,18 +8,12 @@ function Feedback(){
             
         <input type="text" placeholder="write your feedback!" /> 
         <button>Send</button>
-        <FeedbackMessage subject = "Hi,i'm Android:please enter your feedback!" 
-            replay = "android"/>
-        <FeedbackMessage subject = "Yeah! Good" 
-            replay = "user" />
-        <FeedbackMessage subject = "Why good rather than Excellent ?" 
-            replay = "android"/>
-        <FeedbackMessage subject = "Because need to enhance your AI features..!" 
-            replay = "user"/>
+        
+        <MessageChat />     
 
         </div>
     )
 }
-export default Feedback;
+ export default Feedback; 
 
 

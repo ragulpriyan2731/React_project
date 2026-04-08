@@ -2,16 +2,17 @@ import React from 'react';
 import user from '../assets/user-solid-full.svg';
 import android from '../assets/android-brands-solid-full.svg';
 
-function FeedbackMessage({subject,replay}) {
+function FeedbackMessages({subject,replay}) {
   return (
     <div>
     {replay === "android" && 
-    (<img src={android} alt='androidicon' width={30} />)}
+    (<img src={android} alt='androidicon' width={35} />)}
     {subject}
     {replay === "user" &&
-    (<img src={user} alt="usericon" width={30} />)}
-    </div>
+    (<img src={user} alt="usericon" width={35} />)}
+
+   </div>
   )
 }
 
-export default FeedbackMessage;
+export default FeedbackMessages;

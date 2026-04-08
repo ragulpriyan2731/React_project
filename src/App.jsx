@@ -1,6 +1,5 @@
 import Feedback from './components/Feedback'
-import FeedbackMessage from './components/FeedbackMessage'
-
+import FeedbackMessage from './components/FeedbackMessages'
 
 function App() {
   
@@ -8,7 +7,7 @@ function App() {
   return (
     <>
       <Feedback />
-    </>
+     </>
   )
 }
 
