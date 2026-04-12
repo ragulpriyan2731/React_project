@@ -1,8 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import FeedbackMessage from "./FeedbackMessages";
 
 function MessageChat(){
-const FeedbackMessages = [
+const [FeedbackMessages,setMessage] = useState([
     {
       subject: "Hi,i'm Android:please enter your feedback!",
       replay: "android",
@@ -23,10 +23,26 @@ const FeedbackMessages = [
      replay: "user",
      id: "id4"   
     }
-];
+]);
 
-    return (
-        <>
+
+    function sendMessages(){
+        setMessage([
+          ...FeedbackMessages,
+        {
+            subject: "okay good to see you",
+            replay: "android",
+            id: "id5"
+        }
+    ])
+    }
+
+
+return (
+    <>
+        <div>
+        <button onClick={sendMessages}>Sendfeedback</button>
+        </div>
         {FeedbackMessages.map((feedbackMessages) => {
             return (
                 <FeedbackMessage
@@ -36,7 +52,7 @@ const FeedbackMessages = [
                 />
             )
         })}
-        </>
+    </>
     )
 }
    
